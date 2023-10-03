@@ -1,15 +1,34 @@
-import React from  'react'
+import React, {Component} from  'react';
+import '../styles/PokedexScreen.css';
+import '../styles/PokemonForm.css';
+import PokedexScreen from './PokedexScreen';
+import PokemonForm from './PokemonForm';
 
-class Pokedex extends React.Component{
+class Pokedex extends Component{
     render(){
         return (
-            <div>
-                <h1>
-                    hola
-                </h1>
-                <h2>
-                    estas dentro de Pokedex
-                </h2>
+            <div className="pokedex">
+              <div className="pokedex-left">
+                <div className="pokedex-left-top">
+                  <div className='light is-sky is-big'/>
+                  <div className="light is-red" />
+                  <div className="light is-yellow" />
+                  <div className="light is-green" />
+                </div>
+                <div className="pokedex-screen-container">
+                  <PokedexScreen />
+                </div>
+                <div className="pokedex-left-bottom">
+                  <div className="pokedex-left-bottom-lights">
+                    <div className="light is-blue is-medium" />
+                    <div className="light is-green is-large" />
+                    <div className="light is-orange is-large" />
+                  </div>
+                  <PokemonForm />
+                </div>
+              </div>
+              <div className="pokedex-right-front" />
+              <div className="pokedex-right-back" />
             </div>
         )
     }
