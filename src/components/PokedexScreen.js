@@ -5,7 +5,7 @@ function PokedexScreen({pokemon, loading, error}){
     return (
         <div className="pokedex-screen">
             <div className='pokemon-info'>
-                <h2 className='pokemon-name'>{pokemon.name}</h2>
+                <h2 className='pokemon-name'>No. {pokemon.id} {pokemon.name}</h2>
                 <img
                   className="pokemon-img"
                   src={pokemon.sprites.front_default}
