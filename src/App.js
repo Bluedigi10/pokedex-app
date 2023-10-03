@@ -1,5 +1,6 @@
 import logo from './imgs/logo.svg';
 import './styles/App.css';
+import Pokedex from './components/Pokedex';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         >
           Learn React
         </a>
+        <section>
+          <Pokedex></Pokedex>
+        </section>
       </header>
     </div>
   );
