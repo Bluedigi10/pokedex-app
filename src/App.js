@@ -27,36 +27,45 @@ function App() {
       .catch(err => {
         setLoading(false)
         setError(true)
+        console.log(err)
       })
-  }, [])
+  }, [pokemonID])
   
   return (
-    <div className="pokedex">
-      <div className="pokedex-left">
-        <div className="pokedex-left-top">
-          <div className='light is-sky is-big'/>
-          <div className="light is-red" />
-          <div className="light is-yellow" />
-          <div className="light is-green" />
-        </div>
-        <div className="pokedex-screen-container">
-          <PokedexScreen
-            pokemon={pokemon}
-            loading={loading}
-            error={error}
-          />
-        </div>
-        <div className="pokedex-left-bottom">
-          <div className="pokedex-left-bottom-lights">
-            <div className="light is-blue is-medium" />
-            <div className="light is-green is-large" />
-            <div className="light is-orange is-large" />
+    <div className="App">
+      <header className="App-header">
+      </header>
+      <div className="pokedex">
+        <div className="pokedex-left">
+          <div className="pokedex-left-top">
+          <div className={`light is-sky is-big ${loading && 'is-animated'}`}  />
+            <div className="light is-red" />
+            <div className="light is-yellow" />
+            <div className="light is-green" />
           </div>
-          <PokemonForm />
+          <div className="pokedex-screen-container">
+            <PokedexScreen
+              pokemon={pokemon}
+              loading={loading}
+              error={error}
+            />
+          </div>
+          <div className="pokedex-left-bottom">
+            <div className="pokedex-left-bottom-lights">
+              <div className="light is-blue is-medium" />
+              <div className="light is-green is-large" />
+              <div className="light is-orange is-large" />
+            </div>
+            <PokemonForm
+              setPokemonId={setPokemonId}
+              setLoading={setLoading}
+              setError={setError}
+            />
+          </div>
         </div>
+        <div className="pokedex-right-front" />
+        <div className="pokedex-right-back" />
       </div>
-      <div className="pokedex-right-front" />
-      <div className="pokedex-right-back" />
     </div>
   );
 }

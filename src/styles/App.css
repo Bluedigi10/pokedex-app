@@ -23,6 +23,15 @@ ul{
   list-style: none;
 }
 
+.App {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-family: system-ui;
+}
+
 .pokedex {
   perspective: 1000px;
   position: relative;
