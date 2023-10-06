@@ -21,6 +21,7 @@ function App() {
         // Si todo esta cool, actualizamos el pokemón
         // Y le indicamos que no hay error
         setPokemon(data)
+        console.log(data)
         setLoading(false)
         setError(false)
       })
@@ -63,8 +64,6 @@ function App() {
             />
           </div>
         </div>
-        <div className="pokedex-right-front" />
-        <div className="pokedex-right-back" />
       </div>
     </div>
   );
