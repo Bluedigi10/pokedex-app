@@ -20,12 +20,12 @@ function PokemonForm({ setPokemonId, setLoading, setError }){
     return (
         <form className='pokemon-form' onSubmit={handleSubmit}>
             <input type='text'
-            className='pokemon-input'
-            name='pokemon' 
-            value={pokemon} 
-            placeholder='Search Pokemon'
-            onChange={e => setPokemon(e.target.value)}
-            autoComplete='off'/>
+              className='pokemon-input'
+              name='pokemon' 
+              value={pokemon} 
+              placeholder='Search Pokemon'
+              onChange={e => setPokemon(e.target.value)}
+              autoComplete='off'/>
             <button type='submit' className='pokemon-btn' value=""/>
         </form>
     )
