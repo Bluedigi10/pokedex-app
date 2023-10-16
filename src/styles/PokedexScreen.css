@@ -18,29 +18,37 @@
     padding: 0.8rem;
     flex-grow: 1;
     display: grid;
-    grid-template-columns: 40% calc(60% - 0.8rem);
-    grid-template-rows: 1px 1fr;
+    grid-template-columns: 45% calc(60% - 0.8rem);
+    grid-template-rows: 10% 25% 65%;
     column-gap: 0.8rem;
-    row-gap: 0.7rem;
+    row-gap: 0px;
     grid-template-areas:
       "title title"
       "types  types"
       "img   stats";
   }
   .pokemon-types{
-    padding-top: 10px;
+    margin: 0px 10px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     grid-area: types;
   }
   .pokemon-type{
     display: flex;
     justify-content: center;
     align-content: center;
-    text-transform: capitalize;
-    height: 100%;
     width: 30%;
-    border-radius: 50%;
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 2px;
+  }
+  .type-name{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 20px;
+    -webkit-text-stroke: 0.5px black;
+    -webkit-text-fill-color: white;
   }
   .pokemon-name{
     text-align: center;

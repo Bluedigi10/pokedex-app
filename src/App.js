@@ -64,8 +64,8 @@ function App() {
             />
           </div>
         </div>
-        <div className="pokedex-right-front" />
-        <div className="pokedex-right-back" />
+        {/* <div className="pokedex-right-front" />
+        <div className="pokedex-right-back" /> */}
       </div>
     </div>
   );

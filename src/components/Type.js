@@ -3,63 +3,67 @@ import React from "react";
 function Type({item}){
     const defineTypeColor= () =>{
         var color;
-        switch(item.type.name){
-            case 'bug':
+        const tipo = item.type.name
+        const tipos = {
+            'bug': () => {
                 color = '#A8B820'
-                break
-            case 'water':
+            },
+            'water': () => {
                 color = '#3899F8'
-                break
-            case 'steel':
+            },
+            'steel': () => {
                 color = '#A8A8C0'
-                break
-            case 'dragon':
+            },
+            'dragon': () => {
                 color = '#7860E0'
-                break
-            case 'electric':
+            },
+            'electric': () => {
                 color = '#F8D030'
-                break
-            case 'ghost':
+            },
+            'ghost': () => {
                 color = '#6060B0'
-                break
-            case 'fire':
+            },
+            'fire': () => {
                 color = '#F05030'
-                break
-            case 'fairy':
+            },
+            'fairy': () => {
                 color = '#E79FE7'
-                break
-            case 'ice':
+            },
+            'ice': () => {
                 color = '#58C8E0'
-                break
-            case 'fighting':
+            },
+            'fighting': () => {
                 color = '#A05038'
-                break
-            case 'normal':
+            },
+            'normal': () => {
                 color = '#A8A090'
-                break
-            case 'grass':
+            },
+            'grass': () => {
                 color = '#78C850'
-                break
-            case 'psychic':
+            },
+            'psychic': () => {
                 color = '#F870A0'
-                break
-            case 'rock':
+            },
+            'rock': () => {
                 color = '#B8A058'
-                break
-            case 'dark':
+            },
+            'dark': () => {
                 color = '#7A5848'
-                break
-            case 'ground':
+            },
+            'ground': () => {
                 color = '#E9D6A4'
-                break
-            case 'poison':
+            },
+            'poison': () => {
                 color = '#B058A0'
-                break
-            case 'flying':
+            },
+            'flying': () => {
                 color = '#98A8F0'
-                break
-            default:
-                color = '#ffffff'
+            }
+        }
+        if(tipos[tipo]){
+            tipos[tipo]();
+        }else{
+            color = '#FFFFFF'
         }
         return color
     }
